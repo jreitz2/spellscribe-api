@@ -26,7 +26,7 @@ app.use(session({
   cookie: {
     secure: true,
     httpOnly: true,
-    domain: ".onrender.com",
+    domain: "http://spellscribe-api.onrender.com",
   },
  }));
 app.use(passport.initialize());
