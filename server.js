@@ -14,7 +14,7 @@ const app = express();
 
 //middleware
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: 'https://jreitz2.github.io/spellscribe/',
   credentials: true,
 }));
 app.use(express.json());
