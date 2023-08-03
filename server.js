@@ -26,6 +26,7 @@ app.use(session({
   cookie: {
     secure: true,
     httpOnly: true,
+    domain: ".onrender.com",
   },
  }));
 app.use(passport.initialize());
