@@ -13,6 +13,7 @@ const usersController = require('./controllers/usersController');
 const app = express();
 
 //middleware
+app.set("trust proxy", 1);
 app.use(cors({
   origin: 'https://jreitz2.github.io',
   credentials: true,
