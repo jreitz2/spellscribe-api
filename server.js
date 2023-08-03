@@ -15,7 +15,7 @@ const app = express();
 //middleware
 app.set("trust proxy", 1);
 app.use(cors({
-  origin: 'https://jreitz2.github.io',
+  origin: 'https://spellscribe.onrender.com',
   credentials: true,
 }));
 app.use(express.json());
