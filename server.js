@@ -22,6 +22,10 @@ app.use(session({
   secret: "cats",
   resave: false,
   saveUninitialized: false,
+  cookie: {
+    secure: true,
+    httpOnly: true,
+  },
  }));
 app.use(passport.initialize());
 app.use(passport.session());
