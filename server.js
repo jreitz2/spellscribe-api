@@ -14,7 +14,7 @@ const app = express();
 
 //middleware
 app.use(cors({
-  origin: 'https://jreitz2.github.io/',
+  origin: 'https://jreitz2.github.io',
   credentials: true,
 }));
 app.use(express.json());
