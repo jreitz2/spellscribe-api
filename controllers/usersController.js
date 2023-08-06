@@ -65,7 +65,7 @@ const createCharacter = async (req, res) => {
     }
     user.characters.push({ characterName, characterClass });
     await user.save();
-    res.status(200).json({ message: 'character created', characterName})
+    res.status(200).json({ message: 'character created', user: user})
   } catch (err) {
     console.log(err);
     res.status(500).json({ message: 'server error'});
