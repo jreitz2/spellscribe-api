@@ -28,10 +28,10 @@ app.use(session({
     httpOnly: true,
     sameSite: req => {
       // Check if the User-Agent contains "iPhone" or "Safari"
-      if (req.headers['user-agent'].includes('iPhone') || req.headers['user-agent'].includes('Safari')) {
-        return 'Lax'; // Use Lax for Safari and iPhone
+      if (req.headers['user-agent'].includes('iPhone')) {
+        return 'lax'; // Use Lax for Safari and iPhone
       } else {
-        return 'None'; // Use None for other browsers that support it
+        return 'none'; // Use None for other browsers that support it
       }
     },
   },
