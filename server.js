@@ -26,7 +26,14 @@ app.use(session({
   cookie: {
     secure: true,
     httpOnly: true,
-    sameSite: "none",
+    sameSite: req => {
+      // Check if the User-Agent contains "iPhone" or "Safari"
+      if (req.headers['user-agent'].includes('iPhone') || req.headers['user-agent'].includes('Safari')) {
+        return 'Lax'; // Use Lax for Safari and iPhone
+      } else {
+        return 'None'; // Use None for other browsers that support it
+      }
+    },
   },
  }));
 app.use(passport.initialize());
